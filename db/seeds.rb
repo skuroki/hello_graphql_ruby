@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+post = Post.create!(title: '月に吠える', body: <<EOS)
+月に吠える、それは正しく君の悲しい心である。
+冬になつて私のところの白い小犬もいよいよ吠える。
+昼のうちは空に一羽の雀が啼いても吠える。
+夜はなほさらきらきらと霜が下りる。
+霜の下りる声まで嗅ぎ知つて吠える。
+天を仰ぎ、真実に地面ぢべたに生きてゐるものは悲しい。
+EOS
+
+Comment.create!(body: '月に吠える犬は、自分の影に怪しみ恐れて吠えるのである。', post: post)
